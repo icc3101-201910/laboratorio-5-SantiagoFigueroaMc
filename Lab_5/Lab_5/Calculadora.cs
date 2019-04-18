@@ -8,19 +8,33 @@ namespace Lab_5
 {
     class Calculadora
     {
-        private Random random = new Random();
-        private int numero;
+        private int numero= 0;
 
         public List<ICalcular> calculadoras;
+
+        public Calculadora()
+        {
+            calculadoras = new List<ICalcular>();
+            calculadoras.Add(new PerroFactorial());
+            calculadoras.Add(new Cubo());
+            calculadoras.Add(new Cuadrado());
+            calculadoras.Add(new RobotFibonacci());
+            calculadoras.Add(new PersonaQueSuma5());
+        }
 
         public int GetNumero()
         {
             return numero;
         }
 
-        public void Calcular()
+        public void SetNumero(int n)
         {
-            numero = calculadoras[random.Next(0, calculadoras.Count())].Calcular(numero);
+            numero = n;
+        }
+
+        public void Calcular(int tipo_operacion)
+        {
+            numero = calculadoras[tipo_operacion].Calcular(numero);
         }
     }
 }

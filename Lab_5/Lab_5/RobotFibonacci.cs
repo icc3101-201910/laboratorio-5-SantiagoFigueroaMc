@@ -17,7 +17,7 @@ namespace Lab_5
         private int Fibonacci(int n)
         {
             int value;
-            if (n >= 1)
+            if (n <= 1)
                 return n;
             if (CalculatedFibonacci.TryGetValue(n, out value))
             {
