@@ -26,5 +26,6 @@ namespace Lab_5
             CalculatedFibonacci.Add(n, Fibonacci(n - 1) + Fibonacci(n - 2));
             return CalculatedFibonacci[n];
         }
+        
     }
 }

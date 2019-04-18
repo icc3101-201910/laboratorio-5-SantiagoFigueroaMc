@@ -56,10 +56,15 @@ namespace Lab_5
 
                 if (1 <= calculo && calculo <= 5)
                 {
-                    if (n > 4208 && calculo == 4)
+                    if (n > 46 && calculo == 4)
                     {
-                        Console.WriteLine("Fibonacci no puede calcular mas de 4208 por StackOverflow. Usando n = 4208");
-                        n = 4028;
+                        Console.WriteLine("Fibonacci de 46 es el ultimo que cabe en la variable int. Usando n = 46");
+                        n = 46;
+                    }
+                    if (n > 13 && calculo == 1)
+                    {
+                        Console.WriteLine("Factorial de 13 es el ultimo que cabe en la variable int. Usando n = 13");
+                        n = 46;
                     }
                     calculo--;
                     calculadora.SetNumero(n);
